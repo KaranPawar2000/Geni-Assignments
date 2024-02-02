@@ -1,0 +1,118 @@
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const a= fruits.toString();
+console.log(a);
+console.log(fruits);
+
+// These two different statements both create a new array containing 6 numbers:
+const points = new Array(40, 100, 1, 5, 25, 10);
+const points1 = [40, 100, 1, 5, 25, 10];
+
+// Basic Array Methods
+points.length;
+
+points.toString();
+
+points.push(220);
+console.log(points);
+
+points.pop();
+console.log(points);
+
+points.join("*");
+console.log(points);
+
+fruits.shift();
+console.log(fruits);
+
+fruits.unshift("Lemon");
+console.log(fruits);
+
+delete fruits[0];
+console.log(fruits);
+
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+
+const myChildren = myGirls.concat(myBoys);
+console.log(myChildren);
+
+// The slice() method slices out a piece of an array into a new array:
+const citrus = fruits.slice(1);
+console.log(citrus);
+
+fruits.sort();
+console.log(fruits);
+
+myChildren.reverse();
+console.log(myChildren);
+
+
+// //Creates new array
+
+// myChildren.toSorted();
+// myChildren.toReversed()
+// console.log(myChildren);
+
+//Numeric Sort
+
+const p = [40, 100, 1, 5, 25, 10];
+p.sort(function(a, b){return a - b});
+console.log(p);
+
+
+//Array Iteration Methods
+
+// Map
+const arr1 =[1,2,3,4,5];
+const arr2 = arr1.map(myfun);
+
+for(let i=0;i<arr2.length;i++)
+{
+    console.log(arr2[i]);
+}
+
+function myfun(value,index,array){
+    return value*2;
+}
+
+// filter
+let a1 =[23,54,65,24,11,12,7,8];
+a2 =a1.filter(f);
+for(let i=0;i<a2.length;i++)
+{
+    console.log(a2[i]);
+}
+
+function f(value){
+return value>18;
+}
+
+// form
+Array.from("ABCDEFG");
+
+//reduce();
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+
+// Search Methods
+
+let position = fruits.indexOf("Apple");
+console.log(position);
+
+//find Es6 return first greater than 18
+
+const numberss = [4, 9, 16, 25, 29];
+let first = numberss.find(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+
+
+
+
